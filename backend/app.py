@@ -24,8 +24,16 @@ def create_app():
     app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB
 
     # Initialize extensions
-    CORS(app, origins=['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173'],
-         supports_credentials=True)
+    CORS(
+    app,
+    origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "https://interviewverse-ai-1.onrender.com"
+    ],
+    supports_credentials=True
+)
     JWTManager(app)
 
     # Initialize database
