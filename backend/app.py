@@ -61,7 +61,13 @@ def create_app():
     return app
 
 
+# Create app for production servers like Render
+app = create_app()
+
 if __name__ == '__main__':
-    app = create_app()
     port = int(os.getenv('PORT', 5000))
-    app.run(debug=os.getenv('FLASK_DEBUG', '1') == '1', host='0.0.0.0', port=port)
+    app.run(
+        debug=os.getenv('FLASK_DEBUG', '1') == '1',
+        host='0.0.0.0',
+        port=port
+    )
