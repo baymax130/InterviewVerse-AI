@@ -27,7 +27,9 @@ export default function AppLayout({ children, activePage }) {
   return (
     <div className="min-h-screen bg-slate-950 flex">
       {/* Sidebar */}
-      <aside className="hidden md:flex flex-col w-64 min-h-screen border-r border-white/5 p-6 glass-dark fixed left-0 top-0 h-full">
+     <aside className="flex flex-col w-64 min-h-screen bg-red-600 text-white fixed left-0 top-0 h-full z-50 p-6">
+          <h1 className="text-3xl">TEST SIDEBAR</h1>
+      </aside>
         <Link to="/dashboard" className="flex items-center gap-2 mb-8">
           <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-cyan-500 flex items-center justify-center">
             <Brain className="w-5 h-5 text-white" />
