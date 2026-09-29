@@ -37,8 +37,6 @@ copy .env.example .env
 python app.py
 ```
 
-Backend runs at: http://localhost:5000
-
 ---
 
 ### Frontend Setup
@@ -53,7 +51,6 @@ npm install
 npm run dev
 ```
 
-Frontend runs at: http://localhost:5173
 
 ---
 
